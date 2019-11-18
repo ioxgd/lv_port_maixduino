@@ -22,8 +22,8 @@
  *====================*/
 
 /* Maximal horizontal and vertical resolution to support by the library.*/
-#define LV_HOR_RES_MAX          (320)
-#define LV_VER_RES_MAX          (240)
+#define LV_HOR_RES_MAX          (800)
+#define LV_VER_RES_MAX          (480)
 
 /* Color depth:
  * - 1:  1 byte per pixel
@@ -35,7 +35,7 @@
 
 /* Swap the 2 bytes of RGB565 color.
  * Useful if the display has a 8 bit interface (e.g. SPI)*/
-#define LV_COLOR_16_SWAP   0
+#define LV_COLOR_16_SWAP   1
 
 /* 1: Enable screen transparency.
  * Useful for OSD or other overlapping GUIs.
@@ -215,7 +215,7 @@ typedef void * lv_indev_drv_user_data_t;            /*Type of user data in the i
  *===============*/
 
 /*1: Enable the log module*/
-#define LV_USE_LOG      0
+#define LV_USE_LOG      1
 #if LV_USE_LOG
 /* How important log should be added:
  * LV_LOG_LEVEL_TRACE       A lot of logs to give detailed information
@@ -223,7 +223,7 @@ typedef void * lv_indev_drv_user_data_t;            /*Type of user data in the i
  * LV_LOG_LEVEL_WARN        Log if something unwanted happened but didn't cause a problem
  * LV_LOG_LEVEL_ERROR       Only critical issue, when the system may fail
  */
-#  define LV_LOG_LEVEL    LV_LOG_LEVEL_WARN
+#define LV_LOG_LEVEL    LV_LOG_LEVEL_INFO
 
 /* 1: Print the log with 'printf';
  * 0: user need to register a callback with `lv_log_register_print`*/
